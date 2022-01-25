@@ -1,8 +1,11 @@
 ## About PHP-myFramework-Web
 
-<p align="center"><img src="https://i.imgur.com/zyHWMJU.png" width="150px" height="auto" alt="Logo"></a></p>
-
 Is a web framework written in PHP.
+
+## Usage
+
+cd '/public_html'
+php -S localhost:8000
 
 ## About PHP
 
