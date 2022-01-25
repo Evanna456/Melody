@@ -19,3 +19,5 @@ Is a web framework written in PHP.
 ## Author's Notes
 
 My Attempt at making my own php framework. Although limited at first, I'll gradually add more functions later.
+
+PHP-myFramework-Web is licensed under [MIT](https://choosealicense.com/licenses/mit/)
