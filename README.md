@@ -20,4 +20,6 @@ Is a web framework written in PHP.
 
 My Attempt at making my own php framework. Although limited at first, I'll gradually add more functions later.
 
+## License
+
 PHP-myFramework-Web is licensed under [MIT](https://choosealicense.com/licenses/mit/)
