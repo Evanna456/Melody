@@ -1,9 +1,10 @@
 <?php
 
+require __DIR__ . "/../app/Controllers/PublicController.php";
+
 use Pecee\SimpleRouter\SimpleRouter;
 use Pecee\Http\Request;
-
-require __DIR__ . "/../app/Controllers/PublicController.php";
+use app\Controllers\PublicController;
 
 SimpleRouter::get('/', [PublicController::class, 'index']);
 SimpleRouter::get('/docs', [PublicController::class, 'docs']);

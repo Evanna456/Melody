@@ -1,29 +1,29 @@
 <?php
 
+namespace app\Controllers;
+
 require __DIR__ . "/Controller/Controller.php";
+
+use app\Controllers\Controller\Controller;
 
 class PublicController extends Controller
 {
     public function index()
     {
-        $Controller = new Controller;
-        return $Controller->view('index.php');
+        return Controller::view('index.php');
     }
 
     public function docs()
     {
-        $Controller = new Controller;
-        return $Controller->view('docs.php');
+        return Controller::view('docs.php');
     }
 
     public function error403()
     {
-        $Controller = new Controller;
-        return $Controller->view('errors/error403.php');
+        return Controller::view('errors/error403.php');
     }
     public function error404()
     {
-        $Controller = new Controller;
-        return $Controller->view('errors/error404.php');
+        return Controller::view('errors/error404.php');
     }
 }

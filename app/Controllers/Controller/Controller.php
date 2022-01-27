@@ -1,5 +1,7 @@
 <?php
 
+namespace app\Controllers\Controller;
+
 require __DIR__ . "/IController.php";
 
 class Controller implements IController
