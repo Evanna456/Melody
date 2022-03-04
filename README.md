@@ -4,8 +4,8 @@ Is a web framework written in PHP.
 
 ## Usage
 
-<p>cd '/public_html'</p>
-<p>php -S localhost:8000</p>
+cmd>cd '/public_html'
+cmd>php -S localhost:8000
 
 ## About PHP
 
