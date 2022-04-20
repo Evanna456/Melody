@@ -1,21 +1,21 @@
-<title>myFramework</title>
+<title>Melody</title>
 <!-- Primary Meta Tags -->
-<link rel="icon" href="favicon.ico" type="image/gif" sizes="16x16">
-<meta name="title" content="myFramework">
+<link rel="icon" href="Favicon.ico" type="image/gif" sizes="16x16">
+<meta name="title" content="Melody">
 <meta name="description" content="Is a web framework written in PHP">
 <meta name="keywords" content="PHP, framework, myFramework">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mywebsite.com">
-<meta property="og:title" content="myFramework">
+<meta property="og:title" content="Melody">
 <meta property="og:description" content="Is a web framework written in PHP">
 <meta property="og:image" content="/images/Web Embed.jpg">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://mywebsite.com">
-<meta property="twitter:title" content="myFramework">
+<meta property="twitter:title" content="Melody">
 <meta property="twitter:description" content="Is a web framework written in PHP">
 <meta property="twitter:image" content="/images/Web Embed.jpg">
 

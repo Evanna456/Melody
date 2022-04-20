@@ -1,10 +1,12 @@
 <?php
 
-namespace app\Controllers;
+declare(strict_types=1);
+
+namespace App\Controllers;
 
 require __DIR__ . "/Controller/Controller.php";
 
-use app\Controllers\Controller\Controller;
+use App\Controllers\Controller\Controller;
 
 class PublicController extends Controller
 {

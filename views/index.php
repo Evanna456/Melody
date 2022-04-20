@@ -18,8 +18,9 @@
         <div class="container">
             <div id="index">
                 <div class="row">
-                    <div class="col-lg-12" id="box" align="center">
-                        <h2>myFramework</h2>
+                    <div class="col-lg-12" align="center">
+                        <h2>Melody</h2>
+                        <img class="img-responsive" src="images/Melody.png" width="640px" height="auto" alt="logo" />
                         <p>Is a web framework written in PHP</p>
                     </div>
                 </div>
@@ -30,7 +31,7 @@
 
     <style scoped>
         #index {
-            margin: 250px 0px 0px 0px;
+            margin: 50px 0px 0px 0px;
         }
     </style>
     <script defer>
