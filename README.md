@@ -1,5 +1,7 @@
 ## About PHP-myFramework-Web
 
+<p align="center"><img src="https://i.imgur.com/rgwJljb.png" width="150px" height="auto" alt="Logo"></a></p>
+
 Is a web framework written in PHP.
 
 ## Usage
@@ -18,8 +20,9 @@ Is a web framework written in PHP.
 
 ## Author's Notes
 
-My Attempt at making my own php framework. Although limited at first, I'll gradually add more functions later.
+This is from a former project PHP-myFramework, I gave it a better name and change a few things. I decided not to use any existing libraries
+If I want to make my own framework, It would be done by my own hands.
 
 ## License
 
-PHP-myFramework-Web is licensed under [MIT](https://choosealicense.com/licenses/mit/)
+PHP-Melody-Web is licensed under [MIT](https://choosealicense.com/licenses/mit/)
