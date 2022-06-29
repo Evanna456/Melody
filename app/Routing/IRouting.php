@@ -6,6 +6,7 @@ namespace App\Routing;
 
 interface IRouting
 {
-    public function get(string $route, string $call): void;
-    public function route(string $route, string $call): void;
+    public static function get(string $route, string $call): void;
+    public static  function route(string $route, string $call): void;
+    public static function group($middleware, $function): void;
 }
