@@ -1,4 +1,4 @@
-## About PHP-myFramework-Web
+## About PHP-Melody-Web
 
 <p align="center"><img src="https://i.imgur.com/rgwJljb.png" width="150px" height="auto" alt="Logo"></a></p>
 
