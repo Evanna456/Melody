@@ -37,13 +37,19 @@ class Routing implements IRouting
 
     public static function group($middleware, $function): void
     {
-        $_SESSION["X-RateLimit-Limit"] = "100";
-        $_SESSION["X-RateLimit-Remaining"] = "10";
-
-        $middleware = array(
-            $middleware
-        );
-
-        $function();
+        $throttle_parts = explode(",", $middleware["throttle"]);
+        if (session_status() == PHP_SESSION_NONE) {
+            $_SESSION["X-RateLimit-Limit"] = $throttle_parts[0];
+            $_SESSION["X-RateLimit-Remaining"] = $throttle_parts[0];
+            $_SESSION["X-RateLimit-Expiry"] = time() + $throttle_parts[1] * 60;
+            header("X-RateLimit-Limit: " . $_SESSION["X-RateLimit-Limit"]);
+            header("X-RateLimit-Remaining: " . $_SESSION["X-RateLimit-Remaining"]);
+            $function();
+        } else if (session_status() ==  PHP_SESSION_ACTIVE) {
+            $_SESSION["X-RateLimit-Remaining"] =  $_SESSION["X-RateLimit-Remaining"] - 1;
+            header("X-RateLimit-Limit: " . $_SESSION["X-RateLimit-Limit"]);
+            header("X-RateLimit-Remaining: " . $_SESSION["X-RateLimit-Remaining"]);
+            $function();
+        }
     }
 }
