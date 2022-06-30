@@ -38,15 +38,29 @@ class Routing implements IRouting
     public static function group($middleware, $function): void
     {
         $throttle_parts = explode(",", $middleware["throttle"]);
-        if (session_status() == PHP_SESSION_NONE) {
+        $middleware_url = $middleware["middleware"];
+        if (isset($_SESSION["X-RateLimit-Limit"]) == true && isset($_SESSION["X-RateLimit-Remaining"]) == true) {
+            $_SESSION["X-RateLimit-Remaining"] =  $_SESSION["X-RateLimit-Remaining"] - 1;
+            header("X-RateLimit-Limit: " . $_SESSION["X-RateLimit-Limit"]);
+            header("X-RateLimit-Remaining: " . $_SESSION["X-RateLimit-Remaining"]);
+
+            if (time() < $_SESSION["X-RateLimit-Expiry"]) {
+                if ($_SESSION["X-RateLimit-Remaining"] > 0) {
+                    $function();
+                } else if ($_SESSION["X-RateLimit-Remaining"] < 0) {
+                    $seconds = $_SESSION["X-RateLimit-Expiry"] - time();
+                    sleep($seconds);
+                }
+            } else if (time() > $_SESSION["X-RateLimit-Expiry"]) {
+                $_SESSION["X-RateLimit-Limit"] = $throttle_parts[0];
+                $_SESSION["X-RateLimit-Remaining"] = $throttle_parts[0];
+                $_SESSION["X-RateLimit-Expiry"] = time() + $throttle_parts[1] * 60;
+                $function();
+            }
+        } else {
             $_SESSION["X-RateLimit-Limit"] = $throttle_parts[0];
             $_SESSION["X-RateLimit-Remaining"] = $throttle_parts[0];
             $_SESSION["X-RateLimit-Expiry"] = time() + $throttle_parts[1] * 60;
-            header("X-RateLimit-Limit: " . $_SESSION["X-RateLimit-Limit"]);
-            header("X-RateLimit-Remaining: " . $_SESSION["X-RateLimit-Remaining"]);
-            $function();
-        } else if (session_status() ==  PHP_SESSION_ACTIVE) {
-            $_SESSION["X-RateLimit-Remaining"] =  $_SESSION["X-RateLimit-Remaining"] - 1;
             header("X-RateLimit-Limit: " . $_SESSION["X-RateLimit-Limit"]);
             header("X-RateLimit-Remaining: " . $_SESSION["X-RateLimit-Remaining"]);
             $function();
