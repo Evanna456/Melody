@@ -46,7 +46,7 @@ class Routing implements IRouting
 
             if (time() < $_SESSION["X-RateLimit-Expiry"]) {
                 if ($_SESSION["X-RateLimit-Remaining"] > 0) {
-                    $function();
+                    Routing::middleware($function, $middleware_url);
                 } else if ($_SESSION["X-RateLimit-Remaining"] < 0) {
                     $seconds = $_SESSION["X-RateLimit-Expiry"] - time();
                     sleep($seconds);
@@ -55,7 +55,7 @@ class Routing implements IRouting
                 $_SESSION["X-RateLimit-Limit"] = $throttle_parts[0];
                 $_SESSION["X-RateLimit-Remaining"] = $throttle_parts[0];
                 $_SESSION["X-RateLimit-Expiry"] = time() + $throttle_parts[1] * 60;
-                $function();
+                Routing::middleware($function, $middleware_url);
             }
         } else {
             $_SESSION["X-RateLimit-Limit"] = $throttle_parts[0];
@@ -65,5 +65,10 @@ class Routing implements IRouting
             header("X-RateLimit-Remaining: " . $_SESSION["X-RateLimit-Remaining"]);
             $function();
         }
+    }
+
+    public static function middleware($function, $middleware_url)
+    {
+        $function();
     }
 }
