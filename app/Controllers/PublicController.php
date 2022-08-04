@@ -19,13 +19,4 @@ class PublicController extends Controller
     {
         return Controller::view('docs.php');
     }
-
-    public function error403()
-    {
-        return Controller::view('errors/error403.php');
-    }
-    public function error404()
-    {
-        return Controller::view('errors/error404.php');
-    }
 }

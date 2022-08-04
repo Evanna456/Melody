@@ -12,4 +12,14 @@ class Middleware implements IMiddleware
     {
         return true;
     }
+
+    public function error(string $errorname): bool
+    {
+        if ($errorname == "403") {
+            header('HTTP/1.0 403 Forbidden');
+            return false;
+        } else {
+            return false;
+        }
+    }
 }

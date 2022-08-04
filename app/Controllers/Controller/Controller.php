@@ -13,4 +13,15 @@ class Controller implements IController
         $path = require '../views/' . $location;
         return $path;
     }
+
+    public function error404()
+    {
+        $path = require '../views/errors/error404.php';
+        return $path;
+    }
+    public function error403()
+    {
+        $path = require '../views/errors/error403.php';
+        return $path;
+    }
 }
