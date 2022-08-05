@@ -8,4 +8,5 @@ interface IController
 {
     public function view(string $location);
     public function error404();
+    public function error403();
 }

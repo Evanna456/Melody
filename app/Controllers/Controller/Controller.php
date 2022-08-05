@@ -16,6 +16,7 @@ class Controller implements IController
 
     public function error404()
     {
+        header('HTTP/1.0 404 Not Found');
         $path = require '../views/errors/error404.php';
         return $path;
     }

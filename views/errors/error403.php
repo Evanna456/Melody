@@ -17,15 +17,19 @@
             <?php
             require '../views/shared/navbar.php';
             ?>
-
-            <div class="col-lg-12">
+            <div class="error" class="col-lg-12" align="center">
                 <h2>403 | Unauthorized</h2>
             </div>
         </div>
-
-        <script defer>
-        </script>
     </div>
+
+    <style scoped>
+        .error {
+            margin-top: 30%;
+        }
+    </style>
+    <script defer>
+    </script>
 </body>
 
 </html>

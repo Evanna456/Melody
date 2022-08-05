@@ -12,7 +12,7 @@ class PublicMiddleware extends Middleware
 {
     public function handle()
     {
-        //Middleware::next();
-        Middleware::error("403");
+        return Middleware::next();
+        //return Middleware::error("403");
     }
 }
