@@ -1,6 +1,6 @@
 <title>Melody</title>
 <!-- Primary Meta Tags -->
-<link rel="icon" href="Favicon.ico" type="image/gif" sizes="16x16">
+<link rel="icon" href="Favicon.ico" type="image/x-icon">
 <meta name="title" content="Melody">
 <meta name="description" content="Is a web framework written in PHP">
 <meta name="keywords" content="PHP, framework, myFramework">

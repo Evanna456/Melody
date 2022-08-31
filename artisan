@@ -1,0 +1,10 @@
+#!/usr/bin/env php
+
+<?php
+
+if (isset($argv) && isset($argv[1]) && $argv[1] == "serve") {
+    chdir('public_html');
+    exec('php -S localhost:8000');
+}
+
+?>
