@@ -6,8 +6,8 @@ Is a web framework written in PHP.
 
 ## Usage
 
-* cmd>cd '/public_html'
-* cmd>php -S localhost:8000
+* 1.)Download and Install PHP runtime or XAMPP.
+* 2.)php artisan serve
 
 ## About PHP
 
