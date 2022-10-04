@@ -20,8 +20,7 @@ Is a web framework written in PHP.
 
 ## Author's Notes
 
-This is from a former project PHP-myFramework, I gave it a better name and change a few things. I decided not to use any existing libraries
-If I want to make my own framework, It would be done by my own hands.
+I decided not to use any existing libraries if I want to make my own framework.
 
 ## License
 
