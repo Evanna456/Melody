@@ -8,7 +8,7 @@ require __DIR__ . "/IRouting.php";
 
 class Routing implements IRouting
 {
-    public static bool $file = false;
+    public static bool $file_exist = false;
 
     public static function get(string $route, string $call): void
     {
@@ -32,15 +32,15 @@ class Routing implements IRouting
                 $Class = "App\Controllers\\" . $class;
                 $Class = new $Class;
                 $Class->$function();
-                Routing::$file =  true;
+                Routing::$file_exist =  true;
                 exit;
             }
         }
     }
 
-    public static function check()
+    public static function check(): void
     {
-        if (Routing::$file == false) {
+        if (Routing::$file_exist == false) {
             require_once __DIR__ . "/../Controllers/Controller/Controller.php";
             $Controller = "App\Controllers\Controller\Controller";
             $Controller = new $Controller;
