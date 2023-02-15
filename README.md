@@ -1,4 +1,4 @@
-## About Melody
+## Melody
 
 <p align="center"><img src="https://i.imgur.com/rgwJljb.png" width="150px" height="auto" alt="Logo"></a></p>
 
@@ -9,7 +9,7 @@ Is a web framework written in PHP.
 * 1.)Download and Install PHP runtime or XAMPP.
 * 2.)php artisan serve
 
-## About PHP
+## PHP
 
 <p align="center"><img src="https://i.imgur.com/zyHWMJU.png" width="150px" height="auto" alt="Logo"></a></p>
 
