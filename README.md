@@ -6,7 +6,7 @@ Is a web framework written in PHP.
 
 ## Usage
 
-* 1.)Download and Install PHP runtime or XAMPP.
+* 1.)Download and Install PHP 7.4 runtime or XAMPP.
 * 2.)php artisan serve
 
 ## PHP
