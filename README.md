@@ -1,4 +1,4 @@
-## About PHP-Melody-Web
+## About Melody
 
 <p align="center"><img src="https://i.imgur.com/rgwJljb.png" width="150px" height="auto" alt="Logo"></a></p>
 
@@ -24,4 +24,4 @@ I decided not to use any existing libraries if I want to make my own framework.
 
 ## License
 
-PHP-Melody-Web is licensed under [MIT](https://choosealicense.com/licenses/mit/)
+Melody is licensed under [MIT](https://choosealicense.com/licenses/mit/)
